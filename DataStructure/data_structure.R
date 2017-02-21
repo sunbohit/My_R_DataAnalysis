@@ -52,3 +52,14 @@ patientdata
 patientdata[1:2] #索引
 patientdata[c("diabetes","status")] #列名
 patientdata$age  #记号$
+
+# 使用因子
+patientID <- c(1, 2, 3, 4) #以向量形式输入数据
+age <- c(25, 34, 28, 52)
+diabetes <- c("Type1", "Type2", "Type1", "Type1")
+status <- c("Poor", "Improved", "Excellent", "Poor")
+diabetes <- factor(diabetes) #因子
+status <- factor(status, order=TRUE) #有序因子
+patientdata <- data.frame(patientID, age, diabetes, status) #组建数据框
+str(patientdata) #显示对象的结构
+summary(patientdata) #显示对象的统计概要
