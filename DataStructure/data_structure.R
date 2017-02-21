@@ -63,3 +63,11 @@ status <- factor(status, order=TRUE) #有序因子
 patientdata <- data.frame(patientID, age, diabetes, status) #组建数据框
 str(patientdata) #显示对象的结构
 summary(patientdata) #显示对象的统计概要
+
+# 创建一个列表
+g <- "My First List"
+h <- c(25, 26, 18, 39)
+j <- matrix(1:10, nrow=5)
+k <- c("one", "two", "three")
+mylist <- list(title=g, ages=h, j, k)
+mylist
