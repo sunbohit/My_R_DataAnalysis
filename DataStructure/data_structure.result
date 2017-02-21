@@ -44,3 +44,19 @@ A2 14 16 18
 A1 19 21 23
 A2 20 22 24
 
+  patientID age diabetes    status
+1         1  25    Type1      Poor
+2         2  34    Type2  Improved
+3         3  28    Type1 Excellent
+4         4  52    Type1      Poor
+  patientID age
+1         1  25
+2         2  34
+3         3  28
+4         4  52
+  diabetes    status
+1    Type1      Poor
+2    Type2  Improved
+3    Type1 Excellent
+4    Type1      Poor
+[1] 25 34 28 52

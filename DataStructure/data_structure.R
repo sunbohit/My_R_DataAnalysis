@@ -39,3 +39,16 @@ dim2 <- c("B1", "B2", "B3")
 dim3 <- c("C1", "C2", "C3", "C4")
 z <- array(1:24, c(2,3,4), dimnames=list(dim1, dim2, dim3))
 z                 
+
+# 创建一个数据框
+patientID <- c(1, 2, 3, 4)
+age <- c(25, 34, 28, 52)
+diabetes <- c("Type1", "Type2", "Type1", "Type1")
+status <- c("Poor", "Improved", "Excellent", "Poor")
+patientdata <- data.frame(patientID, age, diabetes, status)
+patientdata
+
+# 从数据框中取元素
+patientdata[1:2] #索引
+patientdata[c("diabetes","status")] #列名
+patientdata$age  #记号$
