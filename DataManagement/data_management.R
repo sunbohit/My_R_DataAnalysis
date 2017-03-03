@@ -15,3 +15,19 @@ q4 <- c(5,5,5,NA,2)
 q5 <- c(5,5,2,NA,1)
 leadership <- data.frame(manager,date,gender,age,q1,q2,q3,q4,q5, 
                          stringsAsFactors=FALSE)
+						 
+# 在数据框中创建新的变量
+mydata<-data.frame(x1 = c(2, 2, 6, 4),
+                   x2 = c(3, 4, 2, 8))
+	#1
+mydata$sumx <- mydata$x1 + mydata$x2
+mydata$meanx <- (mydata$x1 + mydata$x2)/2
+	#2
+attach(mydata)
+mydata$sumx <- x1 + x2
+mydata$meanx <- (x1 + x2)/2
+detach(mydata)
+	#3
+mydata <- transform(mydata,
+                    sumx = x1 + x2,
+                    meanx = (x1 + x2)/2)
