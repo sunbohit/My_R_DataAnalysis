@@ -31,3 +31,16 @@ detach(mydata)
 mydata <- transform(mydata,
                     sumx = x1 + x2,
                     meanx = (x1 + x2)/2)
+					
+# ±äÁ¿ÖØ±àÂğ
+	#1
+leadership$agecat[leadership$age > 75] <- "Elder"
+leadership$agecat[leadership$age >= 55 &
+                    leadership$age <= 75] <- "Middle Aged"
+leadership$agecat[leadership$age < 55] <- "Young"
+	#2
+leadership <- within(leadership,{
+  agecat <- NA
+  agecat[age > 75] <- "Elder"
+  agecat[age >= 55 & age <= 75] <- "Middle Aged"
+  agecat[age < 55] <- "Young" })
