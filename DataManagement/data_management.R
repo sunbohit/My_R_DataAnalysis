@@ -68,3 +68,8 @@ z <- sum(x)
 
 x <- c(1, 2, NA, 3)
 y <- sum(x, na.rm=TRUE)
+
+# 移除不完整的观测
+leadership
+newdata <- na.omit(leadership)
+newdata
