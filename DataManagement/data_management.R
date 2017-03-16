@@ -45,7 +45,11 @@ leadership <- within(leadership,{
   agecat[age >= 55 & age <= 75] <- "Middle Aged"
   agecat[age < 55] <- "Young" })
 
-# Renaming variables with the plyr package
+# 变量重命名
 names(leadership)
 names(leadership)[2] <- "testDate"
 leadership
+
+library(plyr)
+leadership <- rename(leadership,
+                     c(manager="managerID", date="testDate"))
