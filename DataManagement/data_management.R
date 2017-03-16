@@ -53,3 +53,6 @@ leadership
 library(plyr)
 leadership <- rename(leadership,
                      c(manager="managerID", date="testDate"))
+					 
+# �ж�ȱʧֵ
+is.na(leadership[, 6:10])
