@@ -57,6 +57,14 @@ leadership <- rename(leadership,
 # ÅĞ¶ÏÈ±Ê§Öµ
 is.na(leadership[, 6:10])
 
-#È±Ê§ÖµÖØ±àÂë
+# È±Ê§ÖµÖØ±àÂë
 leadership[age == 99, "age"] <- NA
 leadership
+
+# ÔÚ·ÖÎöÖĞÅÅ³ıÈ±Ê§Öµ
+x <- c(1, 2, NA, 3)
+y <- x[1] + x[2] + x[3] + x[4]
+z <- sum(x)
+
+x <- c(1, 2, NA, 3)
+y <- sum(x, na.rm=TRUE)
