@@ -56,3 +56,7 @@ leadership <- rename(leadership,
 					 
 # ÅĞ¶ÏÈ±Ê§Öµ
 is.na(leadership[, 6:10])
+
+#È±Ê§ÖµÖØ±àÂë
+leadership[age == 99, "age"] <- NA
+leadership
