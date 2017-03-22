@@ -84,3 +84,8 @@ dates <- as.Date(strDates, "%m/%d/%Y")
 today <- Sys.Date()
 format(today, format="%B %d %Y")
 format(today, format="%A")
+
+# 日期的计算
+startdate <- as.Date("2004-02-13")
+enddate   <- as.Date("2009-06-22")
+enddate - startdate
