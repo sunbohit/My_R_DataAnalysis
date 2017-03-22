@@ -73,3 +73,9 @@ y <- sum(x, na.rm=TRUE)
 leadership
 newdata <- na.omit(leadership)
 newdata
+
+# 读取日期数据
+mydates <- as.Date(c("2007-06-22", "2004-02-13"))
+
+strDates <- c("01/05/1965", "08/16/1975")
+dates <- as.Date(strDates, "%m/%d/%Y")
