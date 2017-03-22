@@ -89,3 +89,8 @@ format(today, format="%A")
 startdate <- as.Date("2004-02-13")
 enddate   <- as.Date("2009-06-22")
 enddate - startdate
+
+# 使用defftime的日期的计算
+today <- Sys.Date()
+dob <- as.Date("1956-10-12")
+difftime(today, dob, units="weeks")
