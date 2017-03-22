@@ -79,3 +79,8 @@ mydates <- as.Date(c("2007-06-22", "2004-02-13"))
 
 strDates <- c("01/05/1965", "08/16/1975")
 dates <- as.Date(strDates, "%m/%d/%Y")
+
+# 自定义日期格式
+today <- Sys.Date()
+format(today, format="%B %d %Y")
+format(today, format="%A")
