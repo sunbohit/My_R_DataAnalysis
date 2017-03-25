@@ -117,6 +117,14 @@ attach(leadership)
 newdata <-leadership[order(gender, -age),] #年龄降序
 detach(leadership)
 
+# 选择变量子集
+newdata <- leadership[, c(6:10)]
+
+myvars <- c("q1", "q2", "q3", "q4", "q5")
+newdata <-leadership[myvars]
+
+myvars <- paste("q", 1:5, sep="")
+newdata <- leadership[myvars]
 
 
 
