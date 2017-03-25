@@ -126,6 +126,9 @@ newdata <-leadership[myvars]
 myvars <- paste("q", 1:5, sep="")
 newdata <- leadership[myvars]
 
+# ¶ªÆú±äÁ¿
+myvars <- names(leadership) %in% c("q3", "q4") 
+leadership[!myvars]
 
 
 
