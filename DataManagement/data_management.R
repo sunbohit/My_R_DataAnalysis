@@ -95,7 +95,27 @@ today <- Sys.Date()
 dob <- as.Date("1956-10-12")
 difftime(today, dob, units="weeks")
 
+# 变量类型的判断与转换
+a <- c(1,2,3)
+a
+is.numeric(a)
+is.vector(a)
+a <- as.character(a)
+a
+is.numeric(a)
+is.vector(a)
+is.character(a)
 
+# 数据集的排序
+newdata <- leadership[order(leadership$age),]
+
+attach(leadership)
+newdata <- leadership[order(gender, age),]
+detach(leadership)
+
+attach(leadership)
+newdata <-leadership[order(gender, -age),] #年龄降序
+detach(leadership)
 
 
 
