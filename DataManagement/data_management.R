@@ -94,3 +94,13 @@ enddate - startdate
 today <- Sys.Date()
 dob <- as.Date("1956-10-12")
 difftime(today, dob, units="weeks")
+
+
+
+
+
+
+
+
+
+
