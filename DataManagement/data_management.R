@@ -144,6 +144,10 @@ enddate <- as.Date("2009-10-31")
 newdata <- leadership[which(leadership$date >= startdate &
                               leadership$date <= enddate),]
 
-
+# subset函数选择观测和变量
+newdata <- subset(leadership, age >= 35 | age < 24,
+                  select=c(q1, q2, q3, q4))
+newdata <- subset(leadership, gender=="M" & age > 25,
+                  select=gender:q4)
 
 
