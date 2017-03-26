@@ -138,6 +138,12 @@ attach(leadership)
 newdata <- leadership[gender=='M' & age > 30,]
 detach(leadership)
 
+# 根据日期选择观测
+startdate <- as.Date("2009-01-01")
+enddate <- as.Date("2009-10-31")
+newdata <- leadership[which(leadership$date >= startdate &
+                              leadership$date <= enddate),]
+
 
 
 
