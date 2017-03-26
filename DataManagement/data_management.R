@@ -130,7 +130,13 @@ newdata <- leadership[myvars]
 myvars <- names(leadership) %in% c("q3", "q4") 
 leadership[!myvars]
 
-
+# Ñ¡Ôñ¹Û²âÐÐ
+newdata <- leadership[1:3,]
+newdata <- leadership[leadership$gender=="M" &
+                        leadership$age > 30,]
+attach(leadership)
+newdata <- leadership[gender=='M' & age > 30,]
+detach(leadership)
 
 
 
